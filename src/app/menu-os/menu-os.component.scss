@@ -1,0 +1,17 @@
+@import 'src/assets/scss/styles';
+
+::ng-deep {
+  .p-menubar {
+    background: rgba($color: map-get($background, header), $alpha: 0.7);
+
+    .p-menubar-root-list {
+      li:first-child.menubar-root {
+        font-weight: bold;
+      }
+    }
+
+    .p-element.p-icon-wrapper {
+      display: none;
+    }
+  }
+}

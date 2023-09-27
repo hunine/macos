@@ -1,10 +1,14 @@
-<p-menubar [model]="items">
+<p-menubar styleClass="rounded-none menu-bar" [model]="items">
   <ng-template pTemplate="start">
-    <i class="pi pi-apple"></i>
+    <i class="pi pi-apple px-3"></i>
   </ng-template>
   <ng-template pTemplate="end">
-    <i class="pi pi-wifi"></i>
-    <i class="pi pi-volume-up"></i>
-    <span>Fri 13:07</span>
+    <div class="icon-container flex gap-4">
+      <i class="pi pi-wifi flex justify-items-center items-center"></i>
+      <div class="date-time-container flex gap-2">
+        <span>{{ dateTimeNow | date : "EEE d MMM" }}</span>
+        <span>{{ dateTimeNow | date : "hh:mm" }}</span>
+      </div>
+    </div>
   </ng-template>
 </p-menubar>
